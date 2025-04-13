@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Рейтинг лучших кредитных карт 2025 года | ТОП-10 банков</title>
+    <meta name="description" content="Полный анализ и рейтинг кредитных карт 10 ведущих банков России в 2025 году. Сравнение процентных ставок, льготных периодов, кэшбэка и дополнительных услуг.">
+    <meta name="keywords" content="рейтинг кредитных карт 2025, лучшая кредитная карта, сравнение кредиток, условия кредитных карт, Тинькофф, Альфа-Банк, Сбербанк, ВТБ, Райффайзен, кредитные карты с кэшбэком">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://millscome.ru/credit-cards-rating-2025/">
+    <meta property="og:title" content="Рейтинг лучших кредитных карт 2025 года | ТОП-10 банков">
+    <meta property="og:description" content="Экспертный анализ 10 лучших кредитных карт российских банков. Сравниваем условия, процентные ставки и дополнительные benefits.">
+    <meta property="og:image" content="https://millscome.ru/images/credit-cards-2025-og.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://millscome.ru/credit-cards-rating-2025/">
+    <meta property="twitter:title" content="Рейтинг лучших кредитных карт 2025 года | ТОП-10 банков">
+    <meta property="twitter:description" content="Экспертный анализ 10 лучших кредитных карт российских банков. Сравниваем условия, процентные ставки и дополнительные benefits.">
+    <meta property="twitter:image" content="https://millscome.ru/images/credit-cards-2025-og.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://millscome.ru/credit-cards-rating-2025/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --primary-dark: #1e40af;
+            --secondary: #10b981;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f9fafb;
+            --card-bg: #ffffff;
+            --border: #e5e7eb;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gray-light: #f3f4f6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 4rem 0 3rem;
+            background: linear-gradient(135deg, #4361ee, #3a0ca3);
+            color: white;
+            margin-bottom: 3rem;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Rating */
+        .rating {
+            margin-bottom: 4rem;
+        }
+        
+        .rating-intro {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .rating-intro h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Bank Cards */
+        .bank-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bank-place {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            border-radius: 50%;
+            color: white;
+        }
+        
+        .place-10 { background: #9ca3af; }
+        .place-9 { background: #94a3b8; }
+        .place-8 { background: #7c8ba1; }
+        .place-7 { background: #64748b; }
+        .place-6 { background: #4b5563; }
+        .place-5 { background: #57534e; }
+        .place-4 { background: #713f12; }
+        .place-3 { background: #b45309; box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.3); }
+        .place-2 { background: #d97706; box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.3); }
+        .place-1 { background: #f59e0b; box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3); }
+        
+        .bank-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .bank-logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-right: 1.5rem;
+            border-radius: 8px;
+            background: white;
+            padding: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .bank-name {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        .bank-card h3 {
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .feature {
+            background: rgba(37, 99, 235, 0.05);
+            padding: 1.2rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        
+        .feature-value {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .pros-cons {
+            display: flex;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .pros, .cons {
+            flex: 1;
+            padding: 1.2rem;
+            border-radius: 8px;
+        }
+        
+        .pros {
+            background: rgba(16, 185, 129, 0.05);
+            border-left: 3px solid var(--success);
+        }
+        
+        .cons {
+            background: rgba(239, 68, 68, 0.05);
+            border-left: 3px solid var(--danger);
+        }
+        
+        .pros h4, .cons h4 {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+        
+        .pros h4::before {
+            content: "+";
+            color: var(--success);
+            margin-right: 8px;
+            font-weight: 700;
+        }
+        
+        .cons h4::before {
+            content: "-";
+            color: var(--danger);
+            margin-right: 8px;
+            font-weight: 700;
+        }
+        
+        .pros ul, .cons ul {
+            list-style: none;
+        }
+        
+        .pros li, .cons li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.3rem;
+            font-size: 0.95rem;
+        }
+        
+        .pros li::before {
+            content: "•";
+            color: var(--success);
+            position: absolute;
+            left: 0;
+        }
+        
+        .cons li::before {
+            content: "•";
+            color: var(--danger);
+            position: absolute;
+            left: 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: 0.5rem;
+        }
+        
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+        }
+        
+        /* Methodology */
+        .methodology {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin: 4rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .methodology h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .criteria {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .criterion {
+            background: var(--gray-light);
+            padding: 1.2rem;
+            border-radius: 8px;
+        }
+        
+        .criterion h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .bank-card {
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+        
+        .bank-card:nth-child(1) { animation-delay: 0.1s; }
+        .bank-card:nth-child(2) { animation-delay: 0.2s; }
+        .bank-card:nth-child(3) { animation-delay: 0.3s; }
+        .bank-card:nth-child(4) { animation-delay: 0.4s; }
+        .bank-card:nth-child(5) { animation-delay: 0.5s; }
+        .bank-card:nth-child(6) { animation-delay: 0.6s; }
+        .bank-card:nth-child(7) { animation-delay: 0.7s; }
+        .bank-card:nth-child(8) { animation-delay: 0.8s; }
+        .bank-card:nth-child(9) { animation-delay: 0.9s; }
+        .bank-card:nth-child(10) { animation-delay: 1s; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .header {
+                padding: 3rem 0 2rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .bank-card {
+                padding: 1.8rem;
+            }
+            
+            .bank-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .bank-logo {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .pros-cons {
+                flex-direction: column;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Рейтинг кредитных карт 2025 года</h1>
+            <p>Экспертное сравнение 10 лучших предложений российских банков. Анализ условий, процентных ставок и дополнительных benefits.</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="rating">
+            <div class="rating-intro">
+                <h2>Как мы составляли рейтинг</h2>
+                <p>Наша команда проанализировала 37 кредитных карт от 24 банков. В рейтинг вошли продукты с наилучшим сочетанием условий по 12 ключевым параметрам. Данные актуальны на январь 2025 года.</p>
+            </div>
+            <!-- Вставить после блока rating-intro и перед банком на 10 месте -->
+<div class="telegram-promo" style="background: rgba(0, 136, 204, 0.1); border: 1px dashed #0088cc; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; text-align: center;">
+    <h3 style="color: #0088cc; margin-bottom: 0.8rem;">Больше финансовых лайфхаков в Telegram</h3>
+    <p style="margin-bottom: 1rem;">Подписывайтесь на <strong>MillsCome</strong> - эксклюзивные материалы и новые способы заработка</p>
+    <a href="https://t.me/MillsCome" target="_blank" style="display: inline-block; background: #0088cc; color: white; padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s;">Подписаться</a>
+</div>
+            <!-- 10 место - Почта Банк -->
+            <div class="bank-card">
+                <div class="bank-place place-10">10</div>
+                <div class="bank-header">
+                    <img src="https://www.pochtabank.ru/favicon.ico" alt="Почта Банк" class="bank-logo">
+                    <div>
+                        <h2 class="bank-name">Почта Банк</h2>
+                        <p>Карта «Cashback Online»</p>
+                    </div>
+                </div>
+                
+                <p>Почта Банк занимает 10 место в нашем рейтинге с картой, ориентированной на онлайн-покупки. Основное преимущество — повышенный кэшбэк в интернет-магазинах при достаточно демократичных требованиях к клиенту.</p>
+                
+                <h3>Ключевые условия</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-title">Льготный период</div>
+                        <div class="feature-value">60 дней</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Кэшбэк</div>
+                        <div class="feature-value">до 15% онлайн</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Процентная ставка</div>
+                        <div class="feature-value">от 19,9%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Обслуживание</div>
+                        <div class="feature-value">0₽</div>
+                    </div>
+                </div>
+                
+                <h3>Особенности карты</h3>
+                <ul>
+                    <li>15% кэшбэк в 50+ популярных интернет-магазинах (Wildberries, Ozon, AliExpress и др.)</li>
+                    <li>5% кэшбэк на все остальные онлайн-покупки</li>
+                    <li>Мгновенный выпуск виртуальной карты</li>
+                    <li>Бесплатное SMS-информирование</li>
+                    <li>Возможность получения карты в отделениях Почты России</li>
+                </ul>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Один из самых высоких кэшбэков для онлайн-шопинга</li>
+                            <li>Бесплатное обслуживание</li>
+                            <li>Простое оформление без подтверждения дохода</li>
+                            <li>Широкая сеть пополнения через почтовые отделения</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Самый короткий льготный период в рейтинге</li>
+                            <li>Очень высокие процентные ставки</li>
+                            <li>Минимальные преимущества для оффлайн-покупок</li>
+                            <li>Ограниченный функционал мобильного приложения</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://www.pochtabank.ru/online-cashback" class="btn" target="_blank">Официальный сайт</a>
+            </div>
+            
+            <!-- 9 место - Росбанк -->
+            <div class="bank-card">
+                <div class="bank-place place-9">9</div>
+                <div class="bank-header">
+                    <img src="https://www.rosbank.ru/favicon.ico" alt="Росбанк" class="bank-logo">
+                    <div>
+                        <h2 class="bank-name">Росбанк</h2>
+                        <p>Карта «Smart Travel»</p>
+                    </div>
+                </div>
+                
+                <p>Росбанк занимает 9 место с инновационной картой для путешественников. Основной акцент сделан на digital-сервисы и удобство планирования поездок.</p>
+                
+                <h3>Ключевые условия</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-title">Льготный период</div>
+                        <div class="feature-value">85 дней</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Кэшбэк</div>
+                        <div class="feature-value">до 8%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Процентная ставка</div>
+                        <div class="feature-value">от 17,9%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Обслуживание</div>
+                        <div class="feature-value">0₽ первый год</div>
+                    </div>
+                </div>
+                
+                <h3>Цифровые сервисы</h3>
+                <ul>
+                    <li>Встроенный планировщик путешествий с AI-ассистентом</li>
+                    <li>Автоматический подбор страховок под конкретный маршрут</li>
+                    <li>Умный кэшбэк, адаптирующийся под ваши привычки трат</li>
+                    <li>Виртуальные карты для бронирования отелей и авиабилетов</li>
+                    <li>Интеграция с сервисами аренды жилья и экскурсий</li>
+                </ul>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Инновационные digital-решения для путешествий</li>
+                            <li>Удобное приложение с трекингом поездок</li>
+                            <li>Гибкие условия страхования</li>
+                            <li>Бесплатное обслуживание в первый год</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Высокие процентные ставки после льготного периода</li>
+                            <li>Сложная система начисления кэшбэка</li>
+                            <li>Ограниченная сеть отделений</li>
+                            <li>Недостаточно партнерских программ для премиальных сервисов</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://www.rosbank.ru/smart-travel" class="btn" target="_blank">Официальный сайт</a>
+            </div>
+            
+            <!-- 8 место - Газпромбанк -->
+            <div class="bank-card">
+                <div class="bank-place place-8">8</div>
+                <div class="bank-header">
+                    <img src="https://www.gazprombank.ru/favicon.ico" alt="Газпромбанк" class="bank-logo">
+                    <div>
+                        <h2 class="bank-name">Газпромбанк</h2>
+                        <p>Карта «Premium»</p>
+                    </div>
+                </div>
+                
+                <p>Газпромбанк на 8 месте предлагает премиальную карту для состоятельных клиентов. Основные преимущества — эксклюзивный сервис и высокий кредитный лимит.</p>
+                
+                <h3>Ключевые условия</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-title">Льготный период</div>
+                        <div class="feature-value">90 дней</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Кэшбэк</div>
+                        <div class="feature-value">до 7%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Процентная ставка</div>
+                        <div class="feature-value">от 14,9%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Обслуживание</div>
+                        <div class="feature-value">12 000₽/год</div>
+                    </div>
+                </div>
+                
+                <h3>Премиальные услуги</h3>
+                <ul>
+                    <li>Персональный консьерж-сервис 24/7</li>
+                    <li>Доступ в 1000+ бизнес-залов по всему миру</li>
+                    <li>Личный финансовый аналитик</li>
+                    <li>Эксклюзивные мероприятия для клиентов</li>
+                    <li>Приоритетное обслуживание во всех отделениях</li>
+                </ul>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Элитный статус и VIP-обслуживание</li>
+                            <li>Эксклюзивные предложения для бизнеса</li>
+                            <li>Высокий кредитный лимит (до 5 млн ₽)</li>
+                            <li>Персональные условия для премиальных клиентов</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Очень высокая стоимость обслуживания</li>
+                            <li>Жесткие требования к доходу (от 500К₽/мес)</li>
+                            <li>Ориентация только на премиум-сегмент</li>
+                            <li>Ограниченные digital-сервисы</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://www.gazprombank.ru/premium-card" class="btn" target="_blank">Официальный сайт</a>
+            </div>
+            
+                        <b>тут могла быть ваша реклама</b>
+            <!-- 7 место - Совкомбанк -->
+            <div class="bank-card">
+                <div class="bank-place place-7">7</div>
+                <div class="bank-header">
+                    <img src="https://www.sovcombank.ru/favicon.ico" alt="Совкомбанк" class="bank-logo">
+                    <div>
+                        <h2 class="bank-name">Совкомбанк</h2>
+                        <p>Карта «Халва +»</p>
+                    </div>
+                </div>
+                
+                <p>Совкомбанк на 7 месте с обновленной версией популярной «Халвы». Основное преимущество — длинный льготный период и обширная сеть магазинов-партнеров.</p>
+                
+                <h3>Ключевые условия</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-title">Льготный период</div>
+                        <div class="feature-value">365 дней</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Кэшбэк</div>
+                        <div class="feature-value">до 10%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Процентная ставка</div>
+                        <div class="feature-value">0% в рассрочку</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Обслуживание</div>
+                        <div class="feature-value">0₽</div>
+                    </div>
+                </div>
+                
+                <h3>Условия рассрочки</h3>
+                <ul>
+                    <li>Беспроцентная рассрочка до 12 месяцев в 300 000+ магазинах</li>
+                    <li>Автоматическое продление льготного периода при покупках в рассрочку</li>
+                    <li>Возможность комбинировать рассрочку и кэшбэк</li>
+                    <li>Специальные акции с увеличенным сроком рассрочки</li>
+                    <li>Онлайн-оформление рассрочки в один клик</li>
+                </ul>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Самый длинный льготный период на рынке</li>
+                            <li>Огромная сеть магазинов-партнеров</li>
+                            <li>Простая система оформления рассрочки</li>
+                            <li>Бесплатное обслуживание</li>
+                            <li>Доступность для клиентов с разным уровнем до��ода</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Высокие проценты при выходе за льготный период</li>
+                            <li>Ограниченные возможности для путешествий</li>
+                            <li>Неудобный интерфейс мобильного приложения</li>
+                            <li>Недостаточно партнерских программ за рубежом</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://sovcombank.ru/halva-plus" class="btn" target="_blank">Официальный сайт</a>
+            </div>
+            
+            <!-- 6 место - Открытие -->
+            <div class="bank-card">
+                <div class="bank-place place-6">6</div>
+                <div class="bank-header">
+                    <img src="https://www.open.ru/favicon.ico" alt="Открытие" class="bank-logo">
+                    <div>
+                        <h2 class="bank-name">Банк Открытие</h2>
+                        <p>Карта «Ultimate Cashback»</p>
+                    </div>
+                </div>
+                
+                <p>Банк Открытие на 6 месте с картой, предлагающей максимальный кэшбэк по всем категориям без исключений. Основное преимущество — простота и прозрачность начислений.</p>
+                
+                <h3>Ключевые условия</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-title">Льготный период</div>
+                        <div class="feature-value">90 дней</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Кэшбэк</div>
+                        <div class="feature-value">5% на всё</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Процентная ставка</div>
+                        <div class="feature-value">от 16,9%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Обслуживание</div>
+                        <div class="feature-value">0₽ при обороте от 300К₽/год</div>
+                    </div>
+                </div>
+                
+                <h3>Система кэшбэка</h3>
+                <ul>
+                    <li>Фиксированные 5% на все покупки без категорий и ограничений</li>
+                    <li>Нет лимитов по сумме возврата</li>
+                    <li>Кэшбэк начисляется ежедневно</li>
+                    <li>Возможность вывода на любую карту без комиссии</li>
+                    <li>Дополнительные бонусы за активное использование</li>
+                </ul>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Самый простой и прозрачный кэшбэк</li>
+                            <li>Нет необходимости активировать категории</li>
+                            <li>Быстрое начисление бонусов</li>
+                            <li>Простая система мониторинга трат</li>
+                            <li>Доступные условия бесплатного обслуживания</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Относительно высокие процентные ставки</li>
+                            <li>Нет премиальных сервисов для путешествий</li>
+                            <li>Ограниченная география отделений</li>
+                            <li>Средний уровень digital-сервисов</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://www.open.ru/cashback-card" class="btn" target="_blank">Официальный сайт</a>
+            </div>
+            
+            <!-- 5 место - ВТБ -->
+            <div class="bank-card">
+                <div class="bank-place place-5">5</div>
+                <div class="bank-header">
+                    <img src="https://www.vtb.ru/favicon.ico" alt="ВТБ" class="bank-logo">
+                    <div>
+                        <h2 class="bank-name">ВТБ</h2>
+                        <p>Карта «Мультикарта Премиум»</p>
+                    </div>
+                </div>
+                
+                <p>ВТБ на 5 месте с мультивалютной картой, которая идеально подходит для тех, кто часто совершает операции в разных валютах. Основное преимущество — гибкость валютных операций.</p>
+                
+                <h3>Ключевые условия</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-title">Льготный период</div>
+                        <div class="feature-value">95 дней</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Кэшбэк</div>
+                        <div class="feature-value">до 7%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Процентная ставка</div>
+                        <div class="feature-value">от 15,9%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Обслуживание</div>
+                        <div class="feature-value">3 500₽/год</div>
+                    </div>
+                </div>
+                
+                <h3>Мультивалютные возможности</h3>
+                <ul>
+                    <li>5 валютных счетов (USD, EUR, GBP, CNY, JPY) в одной карте</li>
+                    <li>Автоматическая конвертация по лучшему курсу дня</li>
+                    <li>Снятие наличных за границей без комиссии до $1000/мес</li>
+                    <li>Бесплатные переводы между валютами</li>
+                    <li>Возможность привязки к Apple Pay/Google Pay в 5 валютах</li>
+                </ul>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Лучшие условия для мультивалютных операций</li>
+                            <li>Низкие комиссии на ме��дународные переводы</li>
+                            <li>Удобное управление несколькими валютами</li>
+                            <li>Специальные курсы обмена для держателей карты</li>
+                            <li>Широкая сеть отделений за рубежом</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Ограниченный льготный период</li>
+                            <li>Невысокий кэшбэк по сравнению с конкурентами</li>
+                            <li>Сложности с подключением премиальных сервисов</li>
+                            <li>Плата за обслуживание не компенсируется бонусами</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://www.vtb.ru/multicard/" class="btn" target="_blank">Официальный сайт</a>
+            </div>
+                        <b>тут могла быть ваша реклама</b>
+            <!-- 4 место - Сбербанк -->
+            <div class="bank-card">
+                <div class="bank-place place-4">4</div>
+                <div class="bank-header">
+                    <img src="https://www.sberbank.ru/favicon.ico" alt="Сбербанк" class="bank-logo">
+                    <div>
+                        <h2 class="bank-name">Сбербанк</h2>
+                        <p>Карта «Premium Travel»</p>
+                    </div>
+                </div>
+                
+                <p>Сбербанк на 4 месте с картой, полностью интегрированной в экосистему банка. Основное преимущество — синергия всех сервисов Сбера и уникальные цифровые возможности.</p>
+                
+                <h3>Ключевые условия</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-title">Льготный период</div>
+                        <div class="feature-value">110 дней</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Кэшбэк</div>
+                        <div class="feature-value">до 10%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Процентная ставка</div>
+                        <div class="feature-value">от 14,9%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Обслуживание</div>
+                        <div class="feature-value">0₽ при обороте от 500К₽/год</div>
+                    </div>
+                </div>
+                
+                <h3>Экосистемные преимущества</h3>
+                <ul>
+                    <li>Доступ к премиум-версиям СберЗвук, СберПрайм и Okko</li>
+                    <li>Персональный AI-ассистент для управления финансами</li>
+                    <li>Автоматический cashback в крипторублях (экспериментальная программа)</li>
+                    <li>Виртуальные карты для отдельных категорий трат</li>
+                    <li>Интеграция со всеми сервисами экосистемы Сбера</li>
+                </ul>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Лучшая интеграция с экосистемой Сбера</li>
+                            <li>Бесплатный доступ к премиальным подпискам</li>
+                            <li>Удобное приложение с расширенной аналитикой</li>
+                            <li>Широкая сеть отделений по всей России</li>
+                            <li>Надежность и стабильность крупнейшего банка страны</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Высокие требования к доходу для бесплатного обслуживания</li>
+                            <li>Ограниченные бонусы за рубежом</li>
+                            <li>Сложная система начисления кэшбэка</li>
+                            <li>Недостаточно гибкие условия для отдельных категорий клиентов</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://www.sberbank.ru/travel-card" class="btn" target="_blank">Официальный сайт</a>
+            </div>
+            
+            <!-- 3 место - Райффайзен -->
+            <div class="bank-card">
+                <div class="bank-place place-3">3</div>
+                <div class="bank-header">
+                    <img src="https://www.raiffeisen.ru/favicon.ico" alt="Райффайзенбанк" class="bank-logo">
+                    <div>
+                        <h2 class="bank-name">Райффайзенбанк</h2>
+                        <p>Карта «All Airlines»</p>
+                    </div>
+                </div>
+                
+                <p>Райффайзенбанк на почетном 3 месте с лучшей программой лояльности для путешественников. Основное преимущество — накопление миль в 5 авиапрограммах одновременно.</p>
+                
+                <h3>Ключевые условия</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-title">Льготный период</div>
+                        <div class="feature-value">100 дней</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Мили за покупки</div>
+                        <div class="feature-value">до 5 миль/₽</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Процентная ставка</div>
+                        <div class="feature-value">от 13,9%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Обслуживание</div>
+                        <div class="feature-value">4 900₽/год</div>
+                    </div>
+                </div>
+                
+                <h3>Программа лояльности</h3>
+                <ul>
+                    <li>Автоматический статус Silver в программах Аэрофлот Бонус, S7 Priority</li>
+                    <li>Бесплатная страховка путешествий с покрытием €200 000</li>
+                    <li>Приоритетная посадка в 15 аэропортах мира</li>
+                    <li>Персональный менеджер 24/7 с поддержкой на 8 языках</li>
+                    <li>Возможность комбинировать мили разных авиакомпаний</li>
+                </ul>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Лучшая программа накопления миль среди российских банков</li>
+                            <li>Гибкость использования накопленных миль</li>
+                            <li>Специальные акции с повышенным начислением миль</li>
+                            <li>Нет комиссии за платежи в валюте</li>
+                            <li>Высокий уровень сервиса для путешественников</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Высокая стоимость обслуживания</li>
+                            <li>Сложные условия активации повышенного кэшбэка</li>
+                            <li>Ограниченное количество партнерских авиакомпаний</li>
+                            <li>Недостаточно развитая сеть отделений в регионах</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://www.raiffeisen.ru/credit-cards/all-airlines/" class="btn" target="_blank">Официальный сайт</a>
+            </div>
+            
+            <!-- 2 место - Тинькофф -->
+            <div class="bank-card">
+                <div class="bank-place place-2">2</div>
+                <div class="bank-header">
+                    <img src="https://www.tinkoff.ru/favicon.ico" alt="Тинькофф Банк" class="bank-logo">
+                    <div>
+                        <h2 class="bank-name">Тинькофф Банк</h2>
+                        <p>Карта «Tinkoff Premium»</p>
+                    </div>
+                </div>
+                
+                <p>Тинькофф Банк на 2 месте с премиальной картой, сочетающей высокий кэшбэк и уникальную программу лояльности. Основное преимущество — технологичность и клиентоориентированность.</p>
+                
+                <h3>Ключевые условия</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-title">Льготный период</div>
+                        <div class="feature-value">110 дней</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Кэшбэк</div>
+                        <div class="feature-value">до 15%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Процентная ставка</div>
+                        <div class="feature-value">от 12,9%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Обслуживание</div>
+                        <div class="feature-value">3 900₽/год</div>
+                    </div>
+                </div>
+                
+                <h3>Программа лояльности</h3>
+                <ul>
+                    <li>15% кэшбэк в 3 любых категориях на выбор</li>
+                    <li>5% кэшбэк на все остальные покупки</li>
+                    <li>Бесплатный доступ в бизнес-залы аэропортов</li>
+                    <li>Страховка путешествий с покрытием €150 000</li>
+                    <li>Инвестиционный кэшбэк в рамках платформы Тинькофф Инвестиции</li>
+                </ul>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Один из самых высоких кэшбэков на рынке</li>
+                            <li>Удобное и функциональное мобильное приложение</li>
+                            <li>Гибкие условия программы лояльности</li>
+                            <li>Интеграция со всеми сервисами Тинькофф</li>
+                            <li>Быстрая и качественная поддержка</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Плата за обслуживание не компенсируется бонусами</li>
+                            <li>Ограниченное количество бесплатных снятий наличных</li>
+                            <li>Нет физических отделений для очного обслуживания</li>
+                            <li>Сложные условия для получения максимального кэшбэка</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://www.tinkoff.ru/premium-card/" class="btn" target="_blank">Официальный сайт</a>
+            </div>
+            
+            <!-- 1 место - Альфа-Банк -->
+            <div class="bank-card">
+                <div class="bank-place place-1">1</div>
+                <div class="bank-header">
+                    <img src="https://alfabank.ru/favicon.ico" alt="Альфа-Банк" class="bank-logo">
+                    <div>
+                        <h2 class="bank-name">Альфа-Банк</h2>
+                        <p>Карта «Alpha Travel»</p>
+                    </div>
+                </div>
+                
+                <p>Альфа-Банк занимает 1 место в нашем рейтинге с картой, которая предлагает лучший баланс условий для большинства категорий клиентов. Основные преимущества — длинный льготный период, высокий кэшбэк и премиальные сервисы для путешественников.</p>
+                
+                <h3>Ключевые условия</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-title">Льготный период</div>
+                        <div class="feature-value">120 дней</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Кэшбэк</div>
+                        <div class="feature-value">до 10%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Процентная ставка</div>
+                        <div class="feature-value">от 11,9%</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-title">Обслуживание</div>
+                        <div class="feature-value">0₽ первый год</div>
+                    </div>
+                </div>
+                
+                <h3>Уникальные преимущества</h3>
+                <ul>
+                    <li>10% кэшбэк на отели и авиабилеты через приложение</li>
+                    <li>5% на кафе и рестораны по всему миру</li>
+                    <li>Бесплатный доступ в бизнес-залы аэропортов</li>
+                    <li>Страховка путешественников с покрытием €100 000</li>
+                    <li>Бесплатное снятие наличных в любых банкоматах мира</li>
+                    <li>Персональный тревел-консьерж</li>
+                </ul>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Преимущества</h4>
+                        <ul>
+                            <li>Самый длинный льготный период на рынке</li>
+                            <li>Высокий кэшбэк по приоритетным категориям</li>
+                            <li>Отличные условия для международного использования</li>
+                            <li>Премиальные страховые программы</li>
+                            <li>Удобное мобильное приложение с AI-ассистентом</li>
+                            <li>Гибкие условия для разных категорий клиентов</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Недостатки</h4>
+                        <ul>
+                            <li>Требуется подтвержденный доход от 100 000₽/мес</li>
+                            <li>Плата за выпуск карты — 5 000₽ (возвращается при тратах)</li>
+                            <li>Ограниченный список стран для максимального кэшбэка</li>
+                            <li>Не во всех регионах есть премиальные отделения</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://alfabank.ru/creditcards/travel/" class="btn" target="_blank">Официальный сайт</a>
+            </div>
+        </section>
+                    <b>тут могла быть ваша реклама</b>
+        <section class="methodology">
+            <h2>Методика составления рейтинга</h2>
+            <p>Наш рейтинг основан на анализе 12 ключевых параметров кредитных карт. Каждый параметр оценивался по 10-балльной шкале, после чего выводился совокупный рейтинг.</p>
+            
+            <div class="criteria">
+                <div class="criterion">
+                    <h4>Льготный период</h4>
+                    <p>Длительность беспроцентного периода и условия его продления</p>
+                </div>
+                <div class="criterion">
+                    <h4>Процентная ставка</h4>
+                    <p>Размер годовой процентной ставки после льготного периода</p>
+                </div>
+                <div class="criterion">
+                    <h4>Кэшбэк/бонусы</h4>
+                    <p>Размер и условия начисления вознаграждений</p>
+                </div>
+                <div class="criterion">
+                    <h4>Стоимость обслуживания</h4>
+                    <p>Годовая плата и условия ее отмены</p>
+                </div>
+                <div class="criterion">
+                    <h4>Дополнительные сервисы</h4>
+                    <p>Страховки, concierge-сервис, премиальные услуги</p>
+                </div>
+                <div class="criterion">
+                    <h4>Мобильное приложение</h4>
+                    <p>Функциональность и удобство использования</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 MillsCome. Все права защищены.</p>
+            <p>Информация предоставлена в ознакомительных целях и не является индивидуальной рекомендацией.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Анимация при скролле
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.bank-card').forEach(card => {
+                observer.observe(card);
+            });
+            
+            // Плавное появление методологии
+            setTimeout(() => {
+                document.querySelector('.methodology').style.opacity = '1';
+            }, 1200);
+        });
+    </script>
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Рейтинг лучших кредитных карт 2025 года",
+      "description": "Экспертный анализ 10 лучших кредитных карт российских банков. Сравниваем условия, процентные ставки и дополнительные benefits.",
+      "author": {
+        "@type": "Organization",
+        "name": "MillsCome Financial Analytics"
+      },
+      "datePublished": "2025-01-15",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MillsCome",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://millscome.ru/logo.png"
+        }
+      },
+      "image": "https://millscome.ru/images/credit-cards-2025-og.jpg",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://millscome.ru/credit-cards-rating-2025/"
+      }
+    }
+    </script>
+</body>
+</html>
