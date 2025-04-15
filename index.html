@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MillsCome - База кратких ответов на все темы. Заработок, Здоровье, IT</title>
+    <meta name="description" content="+4 ответа в день, стадия разработки, разные ниши. Только полезная информация без лишней воды.">
+    <meta name="keywords" content="финансы, инвестиции, программирование, заработок, банковские карты, IT советы, быстрые ответы, как заработать, обучение">
+    <meta name="author" content="MillsCome">
+    <link rel="icon" href="https://i.imgur.com/rRggcrx.png" type="image/png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="MillsCome - База проверенных ответов">
+    <meta property="og:description" content="Краткие однострочные ответы на вопросы по финансам, IT и заработку">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://millscome.ru">
+    <meta property="og:image" content="https://millscome.ru/images/og-image.jpg">
+    <meta property="og:site_name" content="MillsCome">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --dark: #212529;
+            --light: #f8f9fa;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: var(--dark);
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            background: linear-gradient(to right, white, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin: 0 auto 1.2rem;
+        }
+        
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .search-results {
+            position: absolute;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            margin-top: 0.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+        }
+        
+        .search-result-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .search-result-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .search-result-item h4 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+        
+        .search-result-item p {
+            margin: 0.3rem 0 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .no-results {
+            padding: 1rem;
+            color: #666;
+            text-align: center;
+        }
+        
+        .highlight {
+            background-color: yellow;
+            color: black;
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin: 2rem 0;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+        
+        .category-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .category-card h2 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+        
+        .subcategory {
+            margin-top: 1.2rem;
+        }
+        
+        .subcategory h3 {
+            font-size: 1rem;
+            color: var(--secondary);
+            margin-bottom: 0.6rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .subcategory h3::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 0.8rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+        }
+        
+        .btn-disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            background: #e9ecef;
+            color: #6c757d;
+        }
+        
+        .ad-block {
+            background: linear-gradient(135deg, #f5f7fa, #e2e8f0);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            margin: 20px 0;
+            border: 2px dashed var(--primary);
+        }
+        
+        .theme-switcher {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 1000;
+        }
+        
+        .theme-toggle {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .dark-mode {
+            --dark: #f8f9fa;
+            --light: #212529;
+            --primary: #3a86ff;
+            --secondary: #2667cc;
+            background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+        }
+        
+        .dark-mode .category-card,
+        .dark-mode .search-results,
+        .dark-mode .ad-block {
+            background: #2d2d2d;
+            color: #f0f0f0;
+        }
+        
+        .dark-mode .search-input {
+            background: #3d3d3d;
+            color: white;
+        }
+        
+        .dark-mode .search-result-item:hover {
+            background: #3a3a3a;
+        }
+        
+        .dark-mode .subcategory h3 {
+            color: #a0c4ff;
+        }
+        
+        .dark-mode .btn-disabled {
+            background: #3d3d3d;
+            color: #b0b0b0;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--dark);
+            font-size: 0.8rem;
+            margin-top: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .categories {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-switcher">
+        <button class="theme-toggle" id="themeToggle">
+            <span id="themeIcon">🌙</span> Тёмная тема
+        </button>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo">MillsCome</div>
+            <p class="tagline">База кратких однострочных ответов на любые вопросы</p>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Поиск по базе знаний..." id="searchInput">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="categories" id="categoriesContainer">
+            <!-- Категории будут добавляться динамически -->
+        </div>
+        
+        <div class="ad-block">
+            <!-- Yandex.RTB R-A-15074046-1 -->
+            <div id="yandex_rtb_R-A-15074046-1"></div>
+            <script>
+                window.yaContextCb.push(() => {
+                    Ya.Context.AdvManager.render({
+                        "blockId": "R-A-15074046-1",
+                        "type": "floorAd",
+                        "platform": "touch"
+                    })
+                })
+            </script>
+            <br> тут могла быть ваша реклама </BR>
+            <small>Подробнее в нашем <a href="https://t.me/MillsCome" style="color: var(--primary);">Telegram</a></small>
+        </div>
+        
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="https://t.me/MillsCome" class="btn" target="_blank" style="background: linear-gradient(135deg, #0088cc, #005580);">Наш Telegram-канал</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2024 MillsCome. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Данные для категорий
+        const categoriesData = [
+            {
+                title: "Финансы",
+                description: "Проверенные способы заработка и финансовые решения",
+                subcategories: [
+                    {
+                        title: "Способы заработка",
+                        links: [
+                            { text: "17 способов", url: "https://golpool092.github.io/Zarabotok17/" },
+                            { text: "15 онлайн-способов", url: "https://golpool092.github.io/Zarobok15/" }
+                        ]
+                    },
+                    {
+                        title: "Банковские продукты",
+                        links: [
+                            { text: "Анализ банковских карт", url: "https://golpool092.github.io/BankCartAnalitic/" }
+                        ]
+                    },
+                    {
+                        title: "Биржа и инвестиции",
+                        links: [
+                            { text: "Биржа и с чем её едят", url: "https://golpool092.github.io/birga/" },
+                            { text: "Инвестиции и заработок", url: "https://golpool092.github.io/Invesia/" },
+                            { text: "15 советов по бирже", url: "https://golpool092.github.io/birgasovet/" },
+                            { text: "15 советов по инвестициям", url: "https://golpool092.github.io/investsovet/" }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "Приложения",
+                description: "Лучшие приложения для различных задач",
+                subcategories: [
+                    {
+                        title: "Топ-10 приложений для монтажа",
+                        links: [
+                            { text: "Просмотреть", url: "https://golpool092.github.io/Montag/" }
+                        ]
+                    },
+                    {
+                        title: "Топ-10 фоторедакторов",
+                        links: [
+                            { text: "Просмотреть", url: "https://golpool092.github.io/fotor/" }
+                        ]
+                    },
+                    {
+                        title: "Новый TikTok",
+                        links: [
+                            { text: "Просмотреть", url: "https://golpool092.github.io/tikru/" }
+                        ]
+                    },
+                    {
+                        title: "Топ-10 сервисов для знакомств",
+                        links: [
+                            { text: "Просмотреть", url: "https://golpool092.github.io/znakom/" }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "Программирование",
+                description: "Ресурсы для начинающих и опытных разработчиков",
+                subcategories: [
+                    {
+                        title: "Сравнение языков",
+                        links: [
+                            { text: "Просмотреть", url: "https://golpool092.github.io/programlanguage/" }
+                        ]
+                    },
+                    {
+                        title: "Начало карьеры",
+                        links: [
+                            { text: "С чего начать?", url: "https://golpool092.github.io/StartCareer/" }
+                        ]
+                    },
+                    {
+                        title: "Обучение программированию",
+                        links: [
+                            { text: "HTML для новичков", url: "https://golpool092.github.io/OsnovaHTML/" },
+                            { text: "CSS для новичков", url: "https://golpool092.github.io/OsnovaCSS/" }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "Здоровье",
+                description: "Проверенные методы для сохранения здоровья и борьбы с вредными привычками",
+                subcategories: [
+                    {
+                        title: "Сохранение молодости и красоты",
+                        links: [
+                            { text: "Как сохранить молодость: 8 способов", url: "https://golpool092.github.io/molodos/" },
+                            { text: "Как похудеть: 8 способов", url: "https://golpool092.github.io/xydenie/" },
+                            { text: "Как избавиться от прыщей: 8 способов", url: "https://golpool092.github.io/prihi/" }
+                        ]
+                    },
+                    {
+                        title: "Борьба с вредными привычками",
+                        links: [
+                            { text: "Как избавиться от курения", url: "https://golpool092.github.io/kyrenia/" },
+                            { text: "Вред электронных сигарет", url: "https://golpool092.github.io/webkyreniainfo/" },
+                            { text: "Как избавиться от вейпинга: 7 способов", url: "https://golpool092.github.io/webkyrenia/" },
+                            { text: "Как избавиться от алкогольной зависимости", url: "https://golpool092.github.io/alkogol/" },
+                            { text: "Как избавиться от наркотической зависимости", url: "https://golpool092.github.io/netnarkotikam/" }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "Скоро...",
+                description: "Отрасль запланирована на 16.04.25",
+                subcategories: [],
+                disabled: true
+            },
+            {
+                title: "Скоро...",
+                description: "Отрасль запланирована на 17.04.25",
+                subcategories: [],
+                disabled: true
+            }
+        ];
+
+        // Класс для управления состоянием приложения
+        class AppState {
+            constructor() {
+                this.searchData = this.prepareSearchData();
+                this.theme = localStorage.getItem('darkMode') === 'enabled' ? 'dark' : 'light';
+            }
+            
+            prepareSearchData() {
+                const data = [];
+                
+                categoriesData.forEach(category => {
+                    category.subcategories.forEach(subcategory => {
+                        subcategory.links.forEach(link => {
+                            data.push({
+                                title: link.text,
+                                url: link.url,
+                                category: category.title,
+                                subcategory: subcategory.title,
+                                description: category.description
+                            });
+                        });
+                        
+                        data.push({
+                            title: subcategory.title,
+                            url: '',
+                            category: category.title,
+                            subcategory: '',
+                            description: category.description
+                        });
+                    });
+                    
+                    data.push({
+                        title: category.title,
+                        url: '',
+                        category: '',
+                        subcategory: '',
+                        description: category.description
+                    });
+                });
+                
+                return data;
+            }
+            
+            performSearch(query) {
+                const lowerQuery = query.toLowerCase().trim();
+                if (!lowerQuery) return [];
+                
+                return this.searchData.filter(item => {
+                    return (
+                        item.title.toLowerCase().includes(lowerQuery) || 
+                        item.category.toLowerCase().includes(lowerQuery) ||
+                        item.subcategory.toLowerCase().includes(lowerQuery) ||
+                        item.description.toLowerCase().includes(lowerQuery)
+                    );
+                }).slice(0, 8);
+            }
+            
+            toggleTheme() {
+                this.theme = this.theme === 'dark' ? 'light' : 'dark';
+                localStorage.setItem('darkMode', this.theme === 'dark' ? 'enabled' : 'disabled');
+                return this.theme;
+            }
+        }
+
+        // Класс для управления UI
+        class UI {
+            constructor() {
+                this.appState = new AppState();
+                this.searchInput = document.getElementById('searchInput');
+                this.searchResults = document.getElementById('searchResults');
+                this.themeToggle = document.getElementById('themeToggle');
+                this.themeIcon = document.getElementById('themeIcon');
+                this.body = document.body;
+                this.categoriesContainer = document.getElementById('categoriesContainer');
+                
+                this.init();
+            }
+            
+            init() {
+                this.renderCategories();
+                this.setupSearch();
+                this.setupTheme();
+                this.setupAnimations();
+                
+                // Применяем сохранённую тему
+                if (this.appState.theme === 'dark') {
+                    this.body.classList.add('dark-mode');
+                    this.themeIcon.textContent = '☀️';
+                    this.themeToggle.innerHTML = '<span id="themeIcon">☀️</span> Светлая тема';
+                }
+            }
+            
+            renderCategories() {
+                this.categoriesContainer.innerHTML = '';
+                
+                categoriesData.forEach((category, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'category-card';
+                    card.style.animationDelay = `${index * 0.1}s`;
+                    
+                    let html = `<h2>${category.title}</h2>`;
+                    html += `<p><b>${category.description}</b></p>`;
+                    
+                    category.subcategories.forEach(subcategory => {
+                        html += `<div class="subcategory"><h3>${subcategory.title}</h3>`;
+                        
+                        subcategory.links.forEach(link => {
+                            html += `<a href="${link.url}" class="btn" target="_blank">${link.text}</a> `;
+                        });
+                        
+                        html += `</div>`;
+                    });
+                    
+                    if (category.disabled) {
+                        html += `<button class="btn btn-disabled">Просмотреть</button>`;
+                    }
+                    
+                    card.innerHTML = html;
+                    this.categoriesContainer.appendChild(card);
+                    
+                    if (category.disabled) {
+                        card.querySelector('.btn-disabled').addEventListener('click', (e) => {
+                            e.preventDefault();
+                            alert('Этот раздел в разработке. Следите за обновлениями в нашем Telegram-канале!');
+                        });
+                    }
+                });
+            }
+            
+            setupSearch() {
+                // Быстрый поиск без задержки
+                this.searchInput.addEventListener('input', () => {
+                    const query = this.searchInput.value;
+                    const results = this.appState.performSearch(query);
+                    this.showResults(results, query);
+                });
+                
+                this.searchInput.addEventListener('focus', () => {
+                    if (this.searchInput.value.trim()) {
+                        const results = this.appState.performSearch(this.searchInput.value);
+                        this.showResults(results, this.searchInput.value);
+                    }
+                });
+                
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('.search-container')) {
+                        this.searchResults.style.display = 'none';
+                    }
+                });
+                
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        this.searchResults.style.display = 'none';
+                    }
+                });
+            }
+            
+            showResults(results, query) {
+                this.searchResults.innerHTML = '';
+                
+                if (results.length === 0 && query.trim()) {
+                    const noResults = document.createElement('div');
+                    noResults.className = 'no-results';
+                    noResults.innerHTML = `
+                        <p>Ничего не найдено по запросу "${query}"</p>
+                        <a href="https://t.me/MillsCome" class="btn" target="_blank" style="margin-top: 10px; padding: 0.5rem 1rem; font-size: 0.9rem;">
+                            Предложить новую статью
+                        </a>
+                    `;
+                    this.searchResults.appendChild(noResults);
+                } else {
+                    results.forEach(result => {
+                        const item = document.createElement('div');
+                        item.className = 'search-result-item';
+                        
+                        const displayTitle = result.subcategory ? 
+                            `${result.subcategory} → ${result.title}` : result.title;
+                        
+                        item.innerHTML = `
+                            <h4>${this.highlightText(displayTitle, query)}</h4>
+                            <p>${this.highlightText(result.category, query)}</p>
+                        `;
+                        
+                        item.addEventListener('click', () => {
+                            if (result.url) {
+                                window.open(result.url, '_blank');
+                            } else {
+                                const categoryElement = [...document.querySelectorAll('.category-card h2')]
+                                    .find(el => el.textContent === result.category);
+                                
+                                if (categoryElement) {
+                                    categoryElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }
+                            }
+                            this.searchResults.style.display = 'none';
+                        });
+                        
+                        this.searchResults.appendChild(item);
+                    });
+                }
+                
+                this.searchResults.style.display = 'block';
+            }
+            
+            highlightText(text, query) {
+                if (!query || !text) return text;
+                const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const regex = new RegExp(`(${escapedQuery})`, 'gi');
+                return text.replace(regex, '<span class="highlight">$1</span>');
+            }
+            
+            setupTheme() {
+                this.themeToggle.addEventListener('click', () => {
+                    const newTheme = this.appState.toggleTheme();
+                    
+                    if (newTheme === 'dark') {
+                        this.body.classList.add('dark-mode');
+                        this.themeIcon.textContent = '☀️';
+                        this.themeToggle.innerHTML = '<span id="themeIcon">☀️</span> Светлая тема';
+                    } else {
+                        this.body.classList.remove('dark-mode');
+                        this.themeIcon.textContent = '🌙';
+                        this.themeToggle.innerHTML = '<span id="themeIcon">🌙</span> Тёмная тема';
+                    }
+                });
+            }
+            
+            setupAnimations() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                document.querySelectorAll('.category-card').forEach(card => {
+                    observer.observe(card);
+                });
+            }
+        }
+
+        // Инициализация приложения
+        document.addEventListener('DOMContentLoaded', () => {
+            new UI();
+        });
+    </script>
+</body>
+</html>
